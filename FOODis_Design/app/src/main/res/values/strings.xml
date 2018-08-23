@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FOODish_Design</string>
+    <string name="review_image">image of dish in review</string>
 </resources>
