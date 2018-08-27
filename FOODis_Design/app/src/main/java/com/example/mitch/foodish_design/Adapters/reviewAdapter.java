@@ -11,7 +11,7 @@ public class reviewAdapter extends BaseAdapter {
     ListView listView;
 
     public reviewAdapter() {
-        listView =
+//        listView =
     }
 
     @Override
