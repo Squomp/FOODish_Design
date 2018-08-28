@@ -10,9 +10,6 @@ public class reviewAdapter extends BaseAdapter {
 
     ListView listView;
 
-    public reviewAdapter() {
-        listView =
-    }
 
     @Override
     public int getCount() {
