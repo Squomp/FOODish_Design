@@ -10,6 +10,7 @@
         android:id="@+id/reviewImage"
         android:layout_width="132dp"
         android:layout_height="121dp"
+        android:layout_marginTop="16dp"
         android:contentDescription="@string/review_image"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
