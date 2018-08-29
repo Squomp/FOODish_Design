@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class RestaurantActivity extends AppCompatActivity implements ReviewFragment.OnFragmentInteractionListener {
+public class RestaurantActivity extends AppCompatActivity implements RestaurantReviewFragment.OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,8 +14,8 @@ public class RestaurantActivity extends AppCompatActivity implements ReviewFragm
         setContentView(R.layout.activity_restaurant);
 
         for (int i = 0; i < 10; i++) {
-            ReviewFragment rf = new ReviewFragment();
-            getSupportFragmentManager().beginTransaction().add(R.id.review_list, rf).commit();
+            RestaurantReviewFragment rrf = new RestaurantReviewFragment();
+            getSupportFragmentManager().beginTransaction().add(R.id.review_list, rrf).commit();
         }
     }
 
