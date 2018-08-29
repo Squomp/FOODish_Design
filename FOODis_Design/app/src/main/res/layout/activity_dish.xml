@@ -75,8 +75,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Dish Name"
-                android:textSize="24sp" />
+                android:text="Sesame Chicken"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textView7"
@@ -90,8 +90,10 @@
                 android:id="@+id/restName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:clickable="true"
                 android:gravity="center"
-                android:text="Restaurant"
+                android:onClick="restaurantClicked"
+                android:text="Pan Wok"
                 android:textColor="@android:color/holo_blue_dark"
                 android:textSize="22sp" />
 
@@ -100,7 +102,8 @@
                 style="?android:attr/ratingBarStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center" />
+                android:layout_gravity="center"
+                android:rating="4" />
 
         </LinearLayout>
 
@@ -144,13 +147,15 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/desc"
+            android:textAllCaps="false"
             android:textSize="24sp" />
 
         <TextView
             android:id="@+id/dishDescription"
             android:layout_width="match_parent"
             android:layout_height="90dp"
-            android:text="This is the dish description" />
+            android:text="Sesame souce, broccoli, bell peppers, and onion"
+            android:textAlignment="center" />
     </LinearLayout>
 
     <View

@@ -33,4 +33,9 @@ public class DishActivity extends AppCompatActivity implements DishReviewFragmen
     public void onFragmentInteraction(Uri uri) {
 
     }
+
+    public void restaurantClicked(View view) {
+        Intent intent = new Intent(this, RestaurantActivity.class);
+        startActivity(intent);
+    }
 }
