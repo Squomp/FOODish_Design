@@ -12,13 +12,11 @@ public class MainActivity extends AppCompatActivity implements TrendingFragment.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        for (int i = 0; i < 10; i++) {
-//            TrendingFragment tf = new TrendingFragment();
-//            getSupportFragmentManager().beginTransaction().add(R.id.trending_list, tf).commit();
-//        }
+        for (int i = 0; i < 10; i++) {
+            TrendingFragment tf = new TrendingFragment();
+            getSupportFragmentManager().beginTransaction().add(R.id.trending_list, tf).commit();
+        }
 
-        Intent intent = new Intent(this, DishActivity.class);
-        startActivity(intent);
     }
 
     @Override

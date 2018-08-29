@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -77,6 +79,16 @@ public class TrendingFragment extends Fragment {
                 restaurantClicked(view);
             }
         });
+
+        ImageView ib = v.findViewById(R.id.imageButton);
+        ib.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), DishActivity.class);
+                startActivity(intent);
+            }
+        });
+
         return v;
     }
 

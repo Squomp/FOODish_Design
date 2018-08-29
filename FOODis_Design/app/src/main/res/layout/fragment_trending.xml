@@ -40,7 +40,8 @@
         android:layout_height="260dp"
         android:layout_weight="0"
         android:contentDescription="food"
-        android:src="@drawable/atwe" />
+        android:src="@drawable/atwe"
+        android:clickable="true"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
