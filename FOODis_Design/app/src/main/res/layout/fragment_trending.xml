@@ -89,6 +89,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
+            android:clickable="true"
             android:text="Wasatch Grind and Pulp"
             android:textColor="@color/colorPrimary"
             android:textSize="18sp" />

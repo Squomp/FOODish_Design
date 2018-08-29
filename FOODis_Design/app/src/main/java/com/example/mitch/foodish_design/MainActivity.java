@@ -1,13 +1,8 @@
 package com.example.mitch.foodish_design;
 
 import android.net.Uri;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.LinearLayout;
-
-import java.util.zip.Inflater;
 
 public class MainActivity extends AppCompatActivity implements TrendingFragment.OnFragmentInteractionListener {
 

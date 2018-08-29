@@ -11,7 +11,7 @@
         android:layout_width="209dp"
         android:layout_height="59dp"
         android:layout_marginEnd="4dp"
-        android:layout_marginStart="88dp"
+        android:layout_marginStart="76dp"
         android:layout_marginTop="8dp"
         android:layout_weight="2"
         app:layout_constraintEnd_toStartOf="@+id/profile_image"
@@ -39,12 +39,11 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:text="Pan Wok"
         android:textColor="#000000"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider3" />
 
@@ -61,14 +60,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo_restaurant" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/bookmark_button"
-        android:layout_width="42dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
-        android:background="#ffffff"
         android:scaleX=".7"
         android:scaleY=".7"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
@@ -114,25 +112,25 @@
                 android:layout_gravity="center"
                 android:layout_weight="0"
                 android:numStars="5"
-                android:rating="3.5" />
+                android:rating="3.5"
+                tools:layout_editor_absoluteX="137dp"
+                tools:layout_editor_absoluteY="341dp" />
         </LinearLayout>
 
-        <ImageButton
-            android:id="@+id/map_button"
+        <ImageView
+            android:id="@+id/map"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#fffffff"
             android:scaleX=".7"
             android:scaleY=".7"
             app:srcCompat="@drawable/map" />
 
-        <ImageButton
+        <ImageView
             android:id="@+id/call_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#ffffff"
             android:scaleX=".7"
             android:scaleY=".7"
             app:srcCompat="@drawable/call" />
@@ -165,6 +163,29 @@
 
     </LinearLayout>
 
+    <ScrollView
+        android:id="@+id/reviews"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:id="@+id/review_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
+
     <LinearLayout
         android:id="@+id/linearLayout7"
         android:layout_width="368dp"
@@ -174,11 +195,13 @@
         android:layout_marginTop="8dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
 
         <TextView
             android:id="@+id/dish_reviews_text"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
@@ -188,6 +211,7 @@
 
         <TextView
             android:id="@+id/restaurant_reviews_text"
+            android:layout_width="81dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
@@ -197,28 +221,37 @@
 
     </LinearLayout>
 
-    <ScrollView
-        android:id="@+id/reviews"
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="368dp"
-        android:layout_height="320dp"
-        android:layout_marginBottom="280dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="66dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout7"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintStart_toStartOf="parent">
 
-        <LinearLayout
-            android:id="@+id/reviews_list"
+        <Button
+            android:id="@+id/add_button"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@android:color/holo_green_dark"
+            android:clickable="true"
+            android:text="Add New Dish"
+            android:textColor="#ffffff" />
 
-        </LinearLayout>
-    </ScrollView>
+        <Button
+            android:id="@+id/share_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:background="@android:color/holo_green_dark"
+            android:clickable="true"
+            android:onClick="shareRestauratnClicked"
+            android:text="Share Restaurant"
+            android:textColor="#ffffff" />
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
